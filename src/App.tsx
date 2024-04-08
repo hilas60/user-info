@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import styled from '@emotion/styled';
+import { UserInfoModal } from './UserInfoModal/UserInfoModal';
+import { Button } from '@mui/material';
 
-function App() {
+const AppHeader = styled.header`
+  display: flex;
+  justify-content: center;
+`;
+
+export const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppHeader>
+        <h1>User Info Stepper</h1>
+      </AppHeader>
+
+      <UserInfoModal />
     </div>
   );
-}
-
-export default App;
+};
